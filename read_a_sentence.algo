@@ -12,7 +12,7 @@ read_a_sentense(str);
 //find number of character
 WHILE (str[i]<>'.') DO
 IF (str[i]=c) THEN
-    cumul=cumul +1;
+   cumul++;
 END_IF  
     i++;
 END_WHILE
@@ -20,7 +20,7 @@ END_WHILE
 //find the number of word 
 WHILE (str[j]<>'.') DO
 IF (str[j]='' AND str[j+1]<>'' ) THEN
-     word=word+1;
+     word++;
 END_IF 
     j++;
 END_WHILE
@@ -28,9 +28,9 @@ END_WHILE
 //find number of vowels
 REPEAT
     IF (str[k]='a' OR str[k]='A' OR str[k]='e' OR str[k]='E'  OR str[k]='i' ORstr[k]='I'  OR str[k]='o' OR str[k]='O' OR str[k]='u' OR str[k]='U' ) THEN
-    count=count+1;
+    count++;
     END_IF
     k++;
-UNTIL (str[k]='.')
+UNTIL (str[k]<>'.')
 
 END
